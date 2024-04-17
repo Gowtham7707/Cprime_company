@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cprime-application
+  labels:
+    app: cprime-application
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cprime-application
+  template:
+    metadata:
+      labels:
+        app: cprime-application
+    spec:
+      containers:
+      - name: cprime-application
+        image: gowthamc121/cprime-application:tagname
+        ports:
+        - containerPort: 8000

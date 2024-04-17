@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cprime-service
+  labels:
+    app: cprime-application
+spec:
+  ports:
+  - port: 8000
+    targetPort: 8000
+  selector:
+    app: cprime-application
+  type: NodePort
