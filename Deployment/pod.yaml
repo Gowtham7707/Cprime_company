@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cprime-application-pod
+  lables:
+    app: cprime-application
+spec:
+  containers:
+  - name: cprime-application-container
+    image: 661764909985.dkr.ecr.us-east-1.amazonaws.com/gowthamc121:latest
+    ports:
+    - containerPort: 8000
